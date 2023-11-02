@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:quizapp/styled_text.dart';
 
+
 class StartScreen extends StatelessWidget{
 
-  const StartScreen({super.key});
+  const StartScreen(this.quizStart, {super.key});
 
-  void onClick(){
-    ///...
-  }
+  final void Function() quizStart;
 
   @override
 
@@ -16,7 +15,12 @@ class StartScreen extends StatelessWidget{
           child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-              Image.asset('assets/images/quiz-logo.png', width: 350,),
+              Image.asset(
+                'assets/images/quiz-logo.png',
+                 width: 350,
+                 color: const Color.fromARGB(163, 255, 255, 255),
+                 ),
+
               const SizedBox(
                 height: 100,
                 ),
@@ -27,7 +31,7 @@ class StartScreen extends StatelessWidget{
                 height: 30,
                 ),
               OutlinedButton.icon(
-                onPressed: onClick,
+                onPressed: quizStart,
                 style: OutlinedButton.styleFrom(foregroundColor: Colors.white),
                 icon: const Icon(Icons.add_circle_outlined),
                 label: const StyledText(
