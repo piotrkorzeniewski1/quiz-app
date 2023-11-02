@@ -12,7 +12,7 @@ class StyledButton extends StatelessWidget{
     return ElevatedButton(
       onPressed: onClick,
       style: ElevatedButton.styleFrom(
-        backgroundColor:Color.fromARGB(255, 26, 1, 50),
+        backgroundColor:Color.fromARGB(255, 27, 1, 52),
         padding: const EdgeInsets.all(10),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
