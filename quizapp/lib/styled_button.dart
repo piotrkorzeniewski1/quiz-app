@@ -15,10 +15,10 @@ class StyledButton extends StatelessWidget{
         backgroundColor:const Color.fromARGB(255, 28, 0, 56),
         padding: const EdgeInsets.all(10),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(20),
         ),
       ),
-      child: Text(answer),
+      child: Text(answer,textAlign: TextAlign.center,),
       );
   }
 }

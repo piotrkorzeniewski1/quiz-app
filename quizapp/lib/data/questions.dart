@@ -44,7 +44,7 @@ import 'package:quizapp/models/quiz_questions.dart';
     ],
   ),
   QuizQuestions(
-    'How should you update data inside of StatefulWidgets?',
+    'last How should you update data inside of StatefulWidgets?',
     [
       'By calling setState()',
       'By calling updateData()',
