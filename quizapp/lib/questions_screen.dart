@@ -20,6 +20,6 @@ class _QuestionsScreenState extends State<QuestionsScreen>{
   @override
 
   Widget build(context){
-    return const StyledText('TEXT',Color.fromARGB(255, 255, 0, 0), 30);
+    return const StyledText('TEXT',Color.fromARGB(255, 111, 0, 255), 30);
   }
 }
