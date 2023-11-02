@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quizapp/gradient_container.dart';
+import 'package:quizapp/start_screen.dart';
 
 
 void main(){
@@ -8,10 +9,13 @@ void main(){
 
     const MaterialApp(
       home: Scaffold(
-        body: GradientContainer(Color.fromARGB(255, 108, 9, 123),Color.fromARGB(255, 107, 0, 119)),
+        body: GradientContainer(
+          Colors.deepPurple,
+          Color.fromARGB(255, 94, 39, 187),
+           StartScreen(),
+        ),
       ),
     ),
-
   );
 
 }
