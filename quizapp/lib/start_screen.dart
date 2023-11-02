@@ -8,6 +8,7 @@ class StartScreen extends StatelessWidget{
   void onClick(){
     ///...
   }
+
   @override
 
   Widget build(context){
@@ -25,11 +26,13 @@ class StartScreen extends StatelessWidget{
               const SizedBox(
                 height: 30,
                 ),
-              OutlinedButton(
+              OutlinedButton.icon(
                 onPressed: onClick,
-                child: const StyledText(
+                style: OutlinedButton.styleFrom(foregroundColor: Colors.white),
+                icon: const Icon(Icons.add_circle_outlined),
+                label: const StyledText(
                   'Start Quiz',
-                  Colors.white,
+                  Color.fromARGB(255, 255, 255, 255),
                    15.0),
                    ),
                 ],
