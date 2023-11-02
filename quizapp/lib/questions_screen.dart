@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:quizapp/styled_button.dart';
 import 'package:quizapp/styled_text.dart';
+import 'package:quizapp/data/questions.dart';
 
 class QuestionsScreen extends StatefulWidget{
 
@@ -15,11 +17,21 @@ class QuestionsScreen extends StatefulWidget{
 
 class _QuestionsScreenState extends State<QuestionsScreen>{
 
-  
-
   @override
 
   Widget build(context){
-    return const StyledText('TEXT',Color.fromARGB(255, 111, 0, 255), 30);
+    final currentQuestion = questions[0];
+    return  Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+                StyledText(currentQuestion.question, Color.fromARGB(255, 255, 212, 84),15),
+                const SizedBox(height: 50,),
+                ...currentQuestion.options.map((answers) {
+                  return StyledButton(answers, () {});
+           }),
+        ],
+      ),
+    );
   }
 }
