@@ -32,7 +32,7 @@ class _QuizState extends State<Quiz>{
       home: Scaffold(
         body: GradientContainer(
           Colors.deepPurple,
-          const Color.fromARGB(255, 94, 39, 187),
+          Color.fromARGB(255, 87, 36, 176),
           activeScreen == 'start-screen'
             ? StartScreen(switchScreen)
             : const QuestionsScreen(),
