@@ -69,7 +69,7 @@ class _QuizState extends State<Quiz>{
     return MaterialApp(
       home: Scaffold(
         body: GradientContainer(
-          Colors.deepPurple,
+          const Color.fromARGB(255, 105, 58, 185),
           const Color.fromARGB(255, 85, 0, 150),
           screenWidget,
             
