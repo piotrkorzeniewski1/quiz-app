@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quizapp/styled_text.dart';
 
 class StyledButton extends StatelessWidget{
 
@@ -12,13 +13,13 @@ class StyledButton extends StatelessWidget{
     return ElevatedButton(
       onPressed: onClick,
       style: ElevatedButton.styleFrom(
-        backgroundColor:Color.fromARGB(255, 27, 1, 52),
+        backgroundColor:const Color.fromARGB(255, 27, 1, 52),
         padding: const EdgeInsets.all(10),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),
         ),
       ),
-      child: Text(answer,textAlign: TextAlign.center,),
+      child: StyledText(answer,Colors.white,15),
       );
   }
 }

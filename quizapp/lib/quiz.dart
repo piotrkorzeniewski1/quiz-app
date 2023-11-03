@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:quizapp/gradient_container.dart';
+import 'package:quizapp/quiz_results.dart';
 import 'package:quizapp/start_screen.dart';
 import 'package:quizapp/questions_screen.dart';
+import 'package:quizapp/data/questions.dart';
 
 class Quiz extends StatefulWidget{
 
@@ -18,11 +20,24 @@ class Quiz extends StatefulWidget{
 class _QuizState extends State<Quiz>{
 
   String? activeScreen;
+  List<String> selectedAnswer = [];
 
   void switchScreen(){
     setState(() {
       activeScreen = 'questions-screen';
     });
+  }
+
+  void choosedAnswer(String answer)
+  {
+    selectedAnswer.add(answer);
+
+    if(selectedAnswer.length == questions.length)
+    {
+      setState(() {
+        activeScreen = 'quiz-results';
+      });
+    }
   }
 
   @override
@@ -32,7 +47,11 @@ class _QuizState extends State<Quiz>{
      Widget screenWidget = StartScreen(switchScreen);
 
      if(activeScreen == 'questions-screen'){
-          screenWidget = const QuestionsScreen();
+          screenWidget = QuestionsScreen(choosedAnswer);
+     }
+     else if(activeScreen == 'quiz-results')
+     {
+          screenWidget = QuizResults(selectedAnswer);
      }
 
     return MaterialApp(

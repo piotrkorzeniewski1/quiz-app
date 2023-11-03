@@ -25,7 +25,7 @@ class StartScreen extends StatelessWidget{
                 height: 100,
                 ),
 
-                const StyledText('Learn Flutter the fun way!',Colors.white, 20.0),
+                const StyledText('Learn Flutter the fun way!',Colors.white, 30),
 
               const SizedBox(
                 height: 30,
@@ -37,7 +37,7 @@ class StartScreen extends StatelessWidget{
                 label: const StyledText(
                   'Start Quiz',
                   Color.fromARGB(255, 255, 255, 255),
-                   15.0),
+                   25),
                    ),
                 ],
               ),

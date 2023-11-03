@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:quizapp/styled_text.dart';
 
 class QuizResults extends StatelessWidget{
 
-  const QuizResults({super.key});
+  const QuizResults(this.listOfAnswers, {super.key});
+  
+  final List<String> listOfAnswers;
 
   @override
 
   Widget build(context){
-    return const Text("HUJfds");
+    return const StyledText('TREFHBDAS',Colors.white,30);
   }
 
 }

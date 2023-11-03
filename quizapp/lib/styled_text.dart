@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class StyledText extends StatelessWidget{
 
@@ -14,7 +15,7 @@ class StyledText extends StatelessWidget{
 
     return Text(
          text,
-         style: TextStyle(
+         style: GoogleFonts.nunitoSans(
             fontSize: size,
             fontWeight: FontWeight.bold,
             color: color,

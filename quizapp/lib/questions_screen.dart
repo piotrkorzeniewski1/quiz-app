@@ -5,7 +5,8 @@ import 'package:quizapp/data/questions.dart';
 
 class QuestionsScreen extends StatefulWidget{
 
-  const QuestionsScreen({super.key});
+  const QuestionsScreen(this.onPressedAnswer,{super.key});
+  final void Function(String answer) onPressedAnswer;
 
  @override
 
@@ -18,11 +19,11 @@ class QuestionsScreen extends StatefulWidget{
 class _QuestionsScreenState extends State<QuestionsScreen>{
 
   var currentQuestionIndex = 0;
-  void answerQuestion(){
+  void answerQuestion(String selectedAnswer){
+
+    widget.onPressedAnswer(selectedAnswer);
+    
     setState(() {
-      if(currentQuestionIndex==(questions.length-1))
-      {
-      }
       currentQuestionIndex++;
     });
   }
@@ -33,7 +34,7 @@ class _QuestionsScreenState extends State<QuestionsScreen>{
     var currentQuestion = questions[currentQuestionIndex];
     return  Center(
       child: Container(
-        margin: const EdgeInsets.all(40),
+        margin: const EdgeInsets.all(50),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -41,13 +42,18 @@ class _QuestionsScreenState extends State<QuestionsScreen>{
                         StyledText(
                           currentQuestion.question,
                           const Color.fromARGB(255, 255, 212, 84),
-                          15
+                          25,
                           ),
 
                         const SizedBox(height: 50,),
 
                         ...currentQuestion.getShuffledAnswers().map((answers) {
-                          return StyledButton(answers, answerQuestion);
+                          return StyledButton(
+                            answers,
+                                (){
+                                      answerQuestion(answers);
+                               }
+                          );
                       }),
                     ],
         ),
