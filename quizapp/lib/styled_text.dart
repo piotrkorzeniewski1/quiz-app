@@ -21,6 +21,7 @@ class StyledText extends StatelessWidget{
             color: color,
       ),
       textAlign: TextAlign.center,
+      softWrap: true,
     );
   }
 }
