@@ -1,3 +1,3 @@
 # quiz-app
 
-Aplikacja do quizów we flutterze. 
+Aplikacja do quizów we flutterze . 
